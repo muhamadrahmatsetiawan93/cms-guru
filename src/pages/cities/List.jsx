@@ -2,41 +2,50 @@ import React, { Component } from 'react'
 import Table from '../../components/Table'
 import ButtonAction from '../../components/ButtonAction'
 import ContentHeader from '../../components/ContentHeader'
-import ControllerCourses from '../../controllers/courses'
+import ControllerCities from '../../controllers/cities'
 
 class List extends Component {
 
-  controller = new ControllerCourses();
+  controller = new ControllerCities();
 
   constructor(props) {
     super(props)
     this.state = {
       dataTable: {
-        thead : [ "No", "Name", "Icon", "CreatedAt", "UpdatedAt"],
+        thead: ["No", "Name", "CreatedAt", "UpdatedAt"],
         tbody : [
-          { No: 1, Name: 'list courses 1', CreatedAt: "12 Dec 2019", UpdatedAt: "12 Dec 2019" , Icon:"https://s3.ap-southeast-1.amazonaws.com/media.gdi.pojokan.io/a35e64d7755a4bac8a72cb72739140ab.jpg"},
-          { No: 2, Name: 'list courses 2', CreatedAt: "12 Dec 2019", UpdatedAt: "12 Dec 2019", Icon:"https://s3.ap-southeast-1.amazonaws.com/media.gdi.pojokan.io/a35e64d7755a4bac8a72cb72739140ab.jpg" },
+          { No: 1, Name: 'Bandung', CreatedAt: "12 Dec 2019", UpdatedAt: "12 Dec 2019" },
+          { No: 2, Name: 'Batam', CreatedAt: "12 Dec 2019", UpdatedAt: "12 Dec 2019" },
         ]
       }
     }
   }
 
   componentDidMount() {
-    console.log(this.controller)
+    this.controller.getList()
+      .then(res => {
+        console.log(res.data)
+        // this.setState({
+        //   dataTable: {
+        //     thead: ["No", "Name", "CreatedAt", "UpdatedAt"],
+        //     tbody: res.data
+        //   }
+        // })
+      })
   }
 
   render() {
     const { dataTable } = this.state
     return (
       <div className="content-wrapper">
-        <ContentHeader title='List Course' />
+        <ContentHeader title='List Cities' />
         <div className="content">
           <div className="row">
             <div className="col-md-12">
               <div className="card">
                 <div className="card-header">
-                  <h3 className="card-title">List Courses</h3>
-                  <ButtonAction title='Add courses' icon='fas fa-plus' class='btn btn-primary float-right' url='/course/entry' />
+                  <h3 className="card-title">List Cities</h3>
+                  <ButtonAction title='Add city' icon='fas fa-plus' class='btn btn-primary float-right' url='/cities/entry' />
                 </div>
                 <Table data={dataTable} />
               </div>

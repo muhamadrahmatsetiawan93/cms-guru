@@ -9,7 +9,7 @@ class List extends Component {
   controller = new ChapterController();
   state = {
     dataTable: {
-      thead : [ "No", "Name", "CreadAt", "UpdateAt"],
+      thead : [ "No", "Name", "UpdateAt"],
       tbody : [
         { No: 1, Name: 'list chapters 1', CreadAt: "12 Dec 2019", UpdateAt: "12 Dec 2019" },
         { No: 2, Name: 'list chapters 2', CreadAt: "12 Dec 2019", UpdateAt: "12 Dec 2019" },

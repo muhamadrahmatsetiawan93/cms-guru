@@ -18,14 +18,17 @@ export class Table extends Component {
             </thead>
             <tbody>
               {tbody.map((body, idx) => {
+                {/* console.log(body) */}
                 return (
-                    <tr key={idx}>
-                    {thead.map((head, idxx) => <td key={idxx}>{body[head]}</td>)}
-                      <td>
-                        <ButtonAction  type="button" title='Edit' class="btn btn-outline-warning btn-sm" icon='fas fa-edit' /> &nbsp;
-                        <ButtonAction  type="button" title='Delete' class="btn btn-outline-danger btn-sm" icon='fas fa-trash' />
-                      </td>
-                    </tr>
+                  <tr key={idx}>
+                    {thead.map((head, idxx) => <td key={idxx}>
+                      {body[head] ? body[head] : <img src={body[head.Icon]} alt={body[head]} /> }
+                    </td>)}
+                    <td>
+                      <ButtonAction type="button" title='Edit' class="btn btn-outline-warning btn-sm" icon='fas fa-edit' /> &nbsp;
+                      <ButtonAction type="button" title='Delete' class="btn btn-outline-danger btn-sm" icon='fas fa-trash' />
+                    </td>
+                  </tr>
                 )
               })}
             </tbody>

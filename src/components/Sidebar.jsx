@@ -25,6 +25,12 @@ const SideBar = () => {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to='/cities' className="nav-link">
+                <i className="nav-icon fas fa-city"></i>
+                <p>Cities</p>
+              </Link>
+            </li>
+            <li className="nav-item">
               <a className="nav-link">
                 <i className="nav-icon fas fa-th"></i>
                 <p>

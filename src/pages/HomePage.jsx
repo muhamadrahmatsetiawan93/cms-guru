@@ -9,6 +9,8 @@ const ListChapters = lazy(() => import('./chapters/List'))
 const AddChapter = lazy(() => import('./chapters/AddChapter'))
 const ListCourses = lazy(()=> import('./courses/List'))
 const AddCourses = lazy(() => import('./courses/AddCourses'))
+const ListCities = lazy(() => import('./cities/List'))
+const AddCity = lazy(() => import('./cities/AddCity'))
 
 export default function HomePage() {
   return (
@@ -22,6 +24,8 @@ export default function HomePage() {
         <Route path='/chapter/entry' component={AddChapter} />
         <Route exact path='/course' component={ListCourses} />
         <Route path='/course/entry' component={AddCourses} />
+        <Route exact path='/cities' component={ListCities} />
+        <Route path='/cities/entry' component={AddCity}/>
         {/* <Route path='/chapter/:id' component={UpdateChapters} /> */}
         <Footer />
       </Switch>
