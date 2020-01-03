@@ -13,13 +13,13 @@ const SideBar = () => {
         <nav className="mt-2">
           <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li className="nav-item">
-              <Link to='/list-chapters' className="nav-link">
+              <Link to='/chapter' className="nav-link">
                 <i className="nav-icon fas fa-border-style"></i>
                 <p>Chapters</p>
               </Link>
             </li>
             <li className="nav-item">
-              <Link to='/list-courses' className="nav-link">
+              <Link to='/course' className="nav-link">
                 <i className="nav-icon fab fa-discourse"></i>
                 <p>Courses</p>
               </Link>

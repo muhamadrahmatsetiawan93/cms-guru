@@ -32,13 +32,13 @@ class Login extends Component {
                 <div className="col-8">
                   <div className="icheck-primary">
                     <input type="checkbox" id="remember" />
-                    <label for="remember">
+                    <label htmlFor="remember">
                       Remember Me
                     </label>
                   </div>
                 </div>
                 <div className='col-4'>
-                  <ButtonAction title='Submit' class='btn btn-block btn-primary' url='/list-chapters'/>
+                  <ButtonAction title='Submit' class='btn btn-block btn-primary' url='/'/>
                 </div>
               </div>
             </div>

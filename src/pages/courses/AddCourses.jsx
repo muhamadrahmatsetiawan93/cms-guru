@@ -21,62 +21,60 @@ class AddCourses extends Component {
   render() {
     const { dataSelect, val } = this.state
     return (
-      <BaseLayout>
-        <div className="content-wrapper">
+      <div className="content-wrapper">
 
-          <div className='col-md-12'>
-            <div className='row'>
-              <div className='col-md-10'>
-                <ContentHeader title="Add Courses" />
-              </div>
-              <div className='col-md-2 p-2'>
-                <div className='row p-2'>
-                  <div className='col-md-6'>
-                    <ButtonAction title='Reset' class='btn btn-block btn-default' />
-                  </div>
-                  <div className='col-md-6'>
-                    <ButtonAction title='Save' class='btn btn-block btn-success ' />
-                  </div>
-                </div>
-              </div>
+        <div className='col-md-12'>
+          <div className='row'>
+            <div className='col-md-10'>
+              <ContentHeader title="Add Courses" />
             </div>
-          </div>
-
-          <div className="content">
-            <div className="row">
-              <div className="col-md-12">
-                <div className='row'>
-                  <div className='col-md-6'>
-                    <div className="card">
-                      <div className="card-header">
-                        <h3 className="card-title mb-0">Add Courses</h3>
-                      </div>
-                      <div className="card-body pad">
-                        <div className="form-group">
-                          <label for="inputName">Courses Name</label>
-                          <input type="text" id="inputName" className="form-control" name='name' />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className='col-md-6'>
-                    <div className="card">
-                      <div className="card-body pad">
-                        <Autocomplete
-
-                        />
-
-                      </div>
-                    </div>
-                  </div>
-
+            <div className='col-md-2 p-2'>
+              <div className='row p-2'>
+                <div className='col-md-6'>
+                  <ButtonAction title='Reset' class='btn btn-block btn-default' />
+                </div>
+                <div className='col-md-6'>
+                  <ButtonAction title='Save' class='btn btn-block btn-success ' />
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </BaseLayout>
+
+        <div className="content">
+          <div className="row">
+            <div className="col-md-12">
+              <div className='row'>
+                <div className='col-md-6'>
+                  <div className="card">
+                    <div className="card-header">
+                      <h3 className="card-title mb-0">Add Courses</h3>
+                    </div>
+                    <div className="card-body pad">
+                      <div className="form-group">
+                        <label for="inputName">Courses Name</label>
+                        <input type="text" id="inputName" className="form-control" name='name' />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='col-md-6'>
+                  <div className="card">
+                    <div className="card-body pad">
+                      <Autocomplete
+
+                      />
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     )
   }
 }

@@ -19,16 +19,15 @@ class List extends Component {
   render() {
     const { data } = this.state
     return (
-      <BaseLayout>
         <div className="content-wrapper">
-          <ContentHeader title='List Chapters' />
+          <ContentHeader title='List Course' />
           <div className="content">
             <div className="row">
               <div className="col-md-12">
                 <div className="card">
                   <div className="card-header">
                     <h3 className="card-title">List Courses</h3>
-                    <ButtonAction title='Add courses' icon='fas fa-plus' class='btn btn-primary float-right' url='/add-courses' />
+                    <ButtonAction title='Add courses' icon='fas fa-plus' class='btn btn-primary float-right' url='/course/entry' />
                   </div>
                   <Table data={data} />
                 </div>
@@ -36,7 +35,6 @@ class List extends Component {
             </div>
           </div>
         </div>
-      </BaseLayout>
     )
   }
 }
