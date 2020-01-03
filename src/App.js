@@ -12,20 +12,23 @@ const AddChapter = lazy(() => import('./pages/chapters/AddChapter'))
 //courses
 const ListCourses = lazy(()=> import('./pages/courses/List'))
 const AddCourses = lazy(() => import('./pages/courses/AddCourses'))
+//Member
+const Login = lazy(() => import('./pages/Login'))
 
 function App() {
   return (
     <>
       <Router>
         <Suspense fallback={<LoadingPage />}>
-          <Navbar />
-          <Sidebar />
-          <Route path='/dashboard' component={Dashboard} />
+          {/* <Navbar /> */}
+          {/* <Sidebar /> */}
+          <Route path='/' exact component={Login} />
+          {/* <Route path='/dashboard' component={Dashboard} />  */}
           <Route path='/list-chapters' component={ListChapters} />
           <Route path='/add-chapters' component={AddChapter} />
           <Route path='/list-courses' component={ListCourses} />
-          <Route path='/add-courses' component={AddCourses} />
-          <Footer />  
+          <Route path='/add-courses' component={AddCourses} /> 
+          {/* <Footer /> */}
         </Suspense>
       </Router>
     </>
