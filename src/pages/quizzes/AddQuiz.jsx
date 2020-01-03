@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ButtonAction from '../../components/ButtonAction'
 import ContentHeader from '../../components/ContentHeader'
 
-class AddChapter extends Component {
+class AddQuiz extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -87,4 +87,4 @@ class AddChapter extends Component {
   }
 }
 
-export default AddChapter
+export default AddQuiz

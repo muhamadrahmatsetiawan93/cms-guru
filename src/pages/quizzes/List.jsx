@@ -2,29 +2,21 @@ import React, { Component } from 'react'
 import Table from '../../components/Table'
 import ButtonAction from '../../components/ButtonAction'
 import ContentHeader from '../../components/ContentHeader'
-import ChapterController from '../../controllers/chapters';
 
 class List extends Component {
 
-  controller = new ChapterController();
-  state = {
-    dataTable: {
-      thead : [ "No", "Name", "CreadAt", "UpdateAt"],
-      tbody : [
-        { No: 1, Name: 'list chapters 1', CreadAt: "12 Dec 2019", UpdateAt: "12 Dec 2019" },
-        { No: 2, Name: 'list chapters 2', CreadAt: "12 Dec 2019", UpdateAt: "12 Dec 2019" },
+  constructor(props) {
+    super(props)
+    this.state = {
+      data: [
+        { id: 1, name: 'list chapters 1' },
+        { id: 2, name: 'list chapters 2' },
       ]
     }
   }
 
-  componentDidMount()
-  {
-    console.log(this.controller)
-    this.controller.getList().then(res => console.log(res))
-  }
-
   render() {
-    const { dataTable } = this.state
+    const { data } = this.state
     return (
       <div className="content-wrapper">
         <ContentHeader title='List Chapters' />
@@ -36,7 +28,7 @@ class List extends Component {
                   <h3 className="card-title">List Chapters</h3>
                   <ButtonAction title='Add chapters' icon='fas fa-plus' class='btn btn-primary float-right' url='/chapter/entry' />
                 </div>
-                <Table data={dataTable} />
+                <Table data={data} />
               </div>
             </div>
           </div>

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import ButtonAction from '../../components/ButtonAction'
 import ContentHeader from '../../components/ContentHeader'
 import Autocomplete from 'react-autocomplete'
-import BaseLayout from '../../components/BaseLayout'
 
 class AddCourses extends Component {
   constructor(props) {
