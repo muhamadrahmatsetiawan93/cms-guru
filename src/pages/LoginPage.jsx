@@ -13,6 +13,7 @@ class Login extends Component {
 
   onSubmitForm = ev => {
     ev.preventDefault();
+<<<<<<< Updated upstream
     this.controller
       .onLogin(this.state.username, this.state.password)
       .then(res => res.data)
@@ -31,6 +32,27 @@ class Login extends Component {
     return this.state.redirect ? (
       <Redirect to="/" />
     ) : (
+=======
+    this.controller.onLogin(this.state.username, this.state.password)
+                  .then(res => res.data)
+                  .then(res => {
+                    localStorage.setItem("jwt", res.jwt)
+                    this.setState({
+                      rediredt:true
+                    })
+                  })
+  }
+
+  render() {
+
+    const { redirect } = this.state
+    
+    if(redirect){
+      return <Redirect to='/' />
+    }
+
+    return (
+>>>>>>> Stashed changes
       <form onSubmit={this.onSubmitForm}>
         <div className="hold-transition login-page">
           <div className="login-box">
