@@ -16,6 +16,7 @@ function App() {
             <Route path='/course'  component={HomePage} />
             <Route path='/cities'  component={HomePage} />
             <Route path='/province'  component={HomePage} />
+            <Route path='/quiz'  component={HomePage} />
             <Route path='/login' component={LoginPage} />
           </Switch>
         </Suspense>
