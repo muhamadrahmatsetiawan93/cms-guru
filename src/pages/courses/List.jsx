@@ -10,12 +10,14 @@ class List extends Component {
 
   constructor(props) {
     super(props)
+    const urlIcon = "https://s3.ap-southeast-1.amazonaws.com/media.gdi.pojokan.io/a35e64d7755a4bac8a72cb72739140ab.jpg";
+
     this.state = {
       dataTable: {
         thead : [ "No", "Name", "Icon", "CreatedAt", "UpdatedAt"],
         tbody : [
-          { No: 1, Name: 'list courses 1', CreatedAt: "12 Dec 2019", UpdatedAt: "12 Dec 2019" , Icon:"https://s3.ap-southeast-1.amazonaws.com/media.gdi.pojokan.io/a35e64d7755a4bac8a72cb72739140ab.jpg"},
-          { No: 2, Name: 'list courses 2', CreatedAt: "12 Dec 2019", UpdatedAt: "12 Dec 2019", Icon:"https://s3.ap-southeast-1.amazonaws.com/media.gdi.pojokan.io/a35e64d7755a4bac8a72cb72739140ab.jpg" },
+          { No: 1, Name: 'list courses 1', CreatedAt: "12 Dec 2019", UpdatedAt: "12 Dec 2019" , Icon: <img width="100" src={urlIcon} /> },
+          { No: 2, Name: 'list courses 2', CreatedAt: "12 Dec 2019", UpdatedAt: "12 Dec 2019", Icon: <img  width="100" src={urlIcon} /> },
         ]
       }
     }
