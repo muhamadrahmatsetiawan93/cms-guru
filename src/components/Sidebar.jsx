@@ -31,6 +31,12 @@ const SideBar = () => {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to='/province' className="nav-link">
+                <i className="nav-icon far fa-map"></i>
+                <p>Province</p>
+              </Link>
+            </li>
+            <li className="nav-item">
               <a className="nav-link">
                 <i className="nav-icon fas fa-th"></i>
                 <p>

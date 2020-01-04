@@ -11,6 +11,8 @@ const ListCourses = lazy(()=> import('./courses/List'))
 const AddCourses = lazy(() => import('./courses/AddCourses'))
 const ListCities = lazy(() => import('./cities/List'))
 const AddCity = lazy(() => import('./cities/AddCity'))
+const ListProvince = lazy(() => import('./province/List'))
+const AddProvince = lazy(() => import('./province/AddProvince'))
 
 export default function HomePage() {
   return (
@@ -25,7 +27,9 @@ export default function HomePage() {
         <Route exact path='/course' component={ListCourses} />
         <Route path='/course/entry' component={AddCourses} />
         <Route exact path='/cities' component={ListCities} />
-        <Route path='/cities/entry' component={AddCity}/>
+        <Route path='/cities/entry' component={AddCity} />
+        <Route exact path='/province' component={ListProvince} />
+        <Route path='/province/entry' component={AddProvince} />
         {/* <Route path='/chapter/:id' component={UpdateChapters} /> */}
         <Footer />
       </Switch>
