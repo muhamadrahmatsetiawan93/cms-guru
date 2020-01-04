@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import AuthController from '../controllers/auth'
+import { Redirect } from 'react-router-dom'
 
 class Login extends Component {
 
@@ -7,7 +8,8 @@ class Login extends Component {
 
   state = {
     username: "",
-    password: ""
+    password: "",
+    rediredt:false
   }
 
   onSubmitForm = (ev) => {
